@@ -1,0 +1,45 @@
+{
+  "name": "@zhubao315/gdmp-master",
+  "version": "1.0.0",
+  "description": "GDMP 无代码平台版本化运维知识包（无 AI Skill Runtime，知识包≠AI 执行）",
+  "bin": {
+    "gdmp-master": "bin/install.js"
+  },
+  "files": [
+    "audit/",
+    "references/",
+    "runbooks/",
+    "scripts/",
+    "tests/",
+    "deploy/",
+    "dist/",
+    "bin/",
+    "SKILL.md",
+    "manifest.yaml",
+    "VERSION",
+    "README.md",
+    "CHANGELOG.md",
+    "install-verification.md"
+  ],
+  "scripts": {
+    "postinstall": "node bin/install.js --check-only",
+    "test": "python3 scripts/validate-skill/validate.py && python3 tests/structure/test_structure.py"
+  },
+  "keywords": [
+    "gdmp",
+    "low-code",
+    "opencode",
+    "skill",
+    "sre",
+    "devops",
+    "operations"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhubao315/gdmp-master.git"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

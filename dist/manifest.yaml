@@ -1,0 +1,35 @@
+name: gdmp-master
+skill_version: 1.0.0
+
+target:
+  platform: gdmp
+  doc_site: https://219.142.87.233:9191/
+  product_endpoints:
+    - http://192.168.1.32:8080
+    - http://219.142.87.231:3280
+  observed_commit: 31e1f5376dcc1e8219d1ef3b875f093bf5b7a901
+
+compatibility:
+  supported_versions: "待确认（仅依据 2026-09-02 commit 的文档与 WAR）"
+  verified_version: "未识别具体平台版本号；以 commit-hash 记录"
+  platform_stack: "Spring Boot 1.5.22 / PostgreSQL 16.16 / Tomcat 9 JDK8"
+
+source:
+  repository: https://github.com/zhubao315/gdmp-master.git
+  repository_scope: documentation-only（无产品后端源码）
+  commit: 3b592e9b6b7c849ffdbac9c5690ad66c1f114e58
+
+runtime:
+  native_skill_runtime: false
+  reason: "WAR 无 AI/MCP/Skill 组件；文档『AI 能力』为业务功能；无 Skill 管理页面证据"
+  install_form: versioned-ops-knowledge-package
+  ai_execution: not_enabled
+
+validation:
+  status: knowledge_package_installed
+  verified_at: "2026-11-24"
+  audit_reports: 8
+  knowledge_package_structure: "PASS - validate/structure tests OK; 18 references + 11 runbooks"
+  install: "PASS - SHA256 verified, installed to .installed/1.0.0, read-back byte-identical"
+  runtime_invocation: "NOT APPLICABLE - GDMP has no AI Skill runtime (ai_execution: not_enabled)"
+  remaining: "取得 GDMP 后台/宿主机授权后补充运行时功能核实与容量基线"
